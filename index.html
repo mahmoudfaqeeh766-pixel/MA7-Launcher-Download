@@ -2,82 +2,102 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MA7 Launcher</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+
 <style>
-body {
-  margin: 0;
-  background: radial-gradient(circle at top, #0f172a, #020617);
-  color: white;
-  font-family: Arial;
-  text-align: center;
-}
-<!-- update -->
-/* الكونتينر */
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 60px 20px;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 
-/* الصورة فوق */
-.hero-img {
-  width: 400px;
-  max-width: 90%;
-  margin-bottom: 40px;
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: radial-gradient(circle at top,#1e3c72,#000);
+  color:white;
+  text-align:center;
 }
 
-/* العنوان */
-h1 {
-  font-size: 55px; /* 🔥 كبرنا النص */
-  line-height: 1.2;
+/* LOGO */
+.logo img{
+  width:220px;
+  border-radius:25px;
+  box-shadow:0 0 50px rgba(0,140,255,0.9);
+  transition:0.4s;
 }
 
-/* الوصف */
-p {
-  font-size: 20px;
-  color: #aaa;
-  margin-top: 15px;
+.logo img:hover{
+  transform:scale(1.07);
 }
 
-/* زر التحميل */
-button {
-  margin-top: 30px;
-  padding: 18px 60px; /* 🔥 زر أكبر */
-  font-size: 22px;
-  background: linear-gradient(135deg, #1e90ff, #0066ff);
-  border: none;
-  border-radius: 12px;
-  color: white;
-  cursor: pointer;
-  box-shadow: 0 0 20px rgba(0,140,255,0.6);
-  transition: 0.3s;
+/* TITLE */
+h1{
+  font-size:50px;
+  margin-top:30px;
+  font-weight:800;
 }
 
-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(0,140,255,1);
+/* TEXT */
+p{
+  margin-top:10px;
+  color:#ccc;
+  font-size:18px;
 }
+
+/* BUTTON */
+.download-btn{
+  display:inline-block;
+  margin-top:40px;
+  padding:16px 50px;
+  font-size:18px;
+  font-weight:bold;
+  color:white;
+  text-decoration:none;
+  border-radius:15px;
+  background: linear-gradient(135deg,#4e8cff,#3a6df0);
+  box-shadow:0 0 30px rgba(78,140,255,0.9);
+  transition:0.3s;
+}
+
+.download-btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 50px rgba(78,140,255,1);
+}
+
+/* ANIMATION */
+@keyframes glow {
+  0% { box-shadow:0 0 15px #4e8cff; }
+  50% { box-shadow:0 0 50px #4e8cff; }
+  100% { box-shadow:0 0 15px #4e8cff; }
+}
+
+.download-btn{
+  animation: glow 2s infinite;
+}
+
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
+<div>
+  <div class="logo">
+    <img src="logo.png" alt="MA7 Logo">
+  </div>
 
-  <!-- الصورة -->
-  <img src="background.png" class="hero-img">
+  <h1>MA7 Launcher</h1>
+  <p>The ultimate launcher for all your gaming needs</p>
 
-  <!-- النص -->
-  <h1>The ultimate launcher for all your gaming needs</h1>
-  <p>Download MA7 Launcher and start playing now</p>
-
-  <!-- زر -->
-  <a href="https://github.com/mahmoudfaqeeh766-pixel/MA7-Launcher/releases/download/v1.0.0/MA7.Launcher.Setup.1.0.0.exe">
-    <button>DOWNLOAD</button>
+  <a href="C:\MA7-Launcher\dist" target="_blank" class="download-btn">
+    DOWNLOAD
   </a>
-
 </div>
 
 </body>
